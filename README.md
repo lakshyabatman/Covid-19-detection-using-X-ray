@@ -1,8 +1,9 @@
 # Covid 19 detection using X-ray images
 
 ## Installation:
-- Build Docker image `docker build -t major:latest`
-- Run application `docker run -d -p 5000:5000 major`
+- Move to project directory.
+- Run `docker-compose build`
+- Run `docker-compose up`
 
 ## Contributing guidelines
 - Please make separate branch to work on a feature/bug.
