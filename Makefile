@@ -1,8 +1,9 @@
-start:
+dev:
 	docker-compose up -d
+	export FLASK_ENV=development
 	watchman-make -p '**/*.py' '**/*.html' -s 1 --run 'touch uwsgi-reload'
 stop:
 	docker-compose down
-test:
-	docker-compose up -d
-	nose2 -v tests.index
+start:
+	docker-compose build 
+	flask run 

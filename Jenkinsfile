@@ -11,5 +11,11 @@ pipeline {
             echo "Stage 2"
           }
         }
+        stage("Unit Test") {
+          steps {
+            sh 'python3 ./tests/index.py'    
+            
+          }
+        }      
       }
 }
