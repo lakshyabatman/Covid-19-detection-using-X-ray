@@ -1,3 +1,6 @@
 flask
 uwsgi
 nose2
+numpy
+keras
+tensorflow
