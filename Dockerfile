@@ -1,4 +1,5 @@
 FROM python:3
+FROM tensorflow/tensorflow
 
 RUN mkdir /app
 WORKDIR /app

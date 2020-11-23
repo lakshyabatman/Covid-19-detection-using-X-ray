@@ -3,4 +3,4 @@ uwsgi
 nose2
 numpy
 keras
-tensorflow
+pillow
