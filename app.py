@@ -10,10 +10,6 @@ app = Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 @app.route("/upload", methods=["POST"])
 def upload():
     target = os.path.join(APP_ROOT, 'images/')
@@ -51,6 +47,12 @@ def upload():
 
     # return send_from_directory("images", filename, as_attachment=True)
     return render_template("template.html",image_name=filename, text=prediction)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+
 
 @app.route('/upload/<filename>')
 def send_image(filename):
