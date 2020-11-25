@@ -1,8 +1,6 @@
 import os
 from uuid import uuid4
-import numpy as np
-from keras.preprocessing import image
-from keras.models import load_model
+
 from flask import Flask, request, render_template, send_from_directory
 
 app = Flask(__name__)
@@ -30,7 +28,11 @@ def upload():
         print ("Accept incoming file:", filename)
         print ("Save it to:", destination)
         upload.save(destination)
-       
+        #import tensorflow as tf
+        import numpy as np
+        from keras.preprocessing import image
+
+        from keras.models import load_model
         new_model = load_model('./model/model1.h5')
         new_model.summary()
         test_image = image.load_img('images//'+filename,target_size=(64,64))
