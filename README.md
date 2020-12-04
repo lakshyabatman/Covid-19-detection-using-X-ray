@@ -4,7 +4,7 @@
 
 - Move to project directory.
 - Run `docker build -t majorproject .` to build docker images.
-- Run `sudo docker run -ti -p 5000:5000 flaskproject bash` to enter docker cli bash.
+- Run `docker run -ti -p 5001:5001 majorproject bash` to enter docker cli bash.
 - Run `python3 app.py` to start server
 - `Ctrl+C` to end server and make sure to run `exit` to exit docker cli.
 
